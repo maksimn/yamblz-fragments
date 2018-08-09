@@ -1,0 +1,81 @@
+[{
+  "artistName": "Chuck Berry",
+  "albums": 1,
+  "songs": 2,
+  "description": "An American singer, songwriter, and one of the pioneers of rock and roll music.",
+  "photo": "https://avatars.yandex.net/get-music-content/63210/77497dd4.p.4524/s200x200",
+  "birthYear": 1926,
+  "deathYear": 2017
+}, {
+  "artistName": "Alexandr Abdulov",
+  "albums": 2,
+  "songs": 3,
+  "description": "A soviet and russian actor, movie director, the people's actor of RFSFR.",
+  "photo": "http://www.biography-life.ru/uploads/posts/2016-10/1477927117_abdulov.jpg",
+  "birthYear": 1953,
+  "deathYear": 2008
+}, {
+  "artistName": "Justin Bieber",
+  "albums": 3,
+  "songs": 4,
+  "description": "A Canadian singer-songwriter. After a talent manager discovered him through his YouTube videos covering songs in 2008 and he signed to RBMG, Bieber released his debut EP, My World, in late 2009.",
+  "photo": "https://s3.r29static.com//bin/entry/4db/340x408,80/1890167/image.jpg",
+  "birthYear": 1994,
+  "deathYear": null
+}, {
+  "artistName": "Buddy Holly",
+  "albums": 4,
+  "songs": 5,
+  "description": "An American musician, singer-songwriter and record producer who was a central and pioneering figure of mid-1950s rock and roll.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/1/14/Buddy_Holly_cropped.JPG",
+  "birthYear": 1936,
+  "deathYear": 1959
+}, {
+  "artistName": "Django Reinhardt",
+  "albums": 5,
+  "songs": 6,
+  "description": "A Belgian-born Romani-French jazz guitarist, musician and composer, regarded as one of the greatest musicians of the twentieth century. He was the first jazz talent to emerge from Europe and remains the most significant.",
+  "photo": "https://i0.wp.com/www.jazzguitarlessons.net/wp-content/uploads/2014/11/django-1.jpg?fit=518%2C359&ssl=1",
+  "birthYear": 1910,
+  "deathYear": 1953
+}, {
+  "artistName": "Viktor Tsoi",
+  "albums": 6,
+  "songs": 7,
+  "description": "a Soviet singer and songwriter who co-founded Kino, one of the most popular and musically influential bands in the history of Russian music.",
+  "photo": "http://bestpeople.today/en/images/persons/ru/Tsoi.jpg",
+  "birthYear": 1962,
+  "deathYear": 1990
+}, {
+  "artistName": "Lana Del Rey",
+  "albums": 7,
+  "songs": 8,
+  "description": "An American singer and songwriter. Her music has been noted by critics for its stylized cinematic quality, its preoccupation with themes of tragic romance, glamour, and melancholia, and its references to pop culture, particularly 1950s and 1960s Americana.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Lana_Del_Rey_at_KROQ_Weenie_Roast_2017_%28cropped%29.jpg/220px-Lana_Del_Rey_at_KROQ_Weenie_Roast_2017_%28cropped%29.jpg",
+  "birthYear": 1985,
+  "deathYear": null
+}, {
+  "artistName": "Edith Piaf",
+  "albums": 8,
+  "songs": 9,
+  "description": "a French vocalist, songwriter, cabaret performer and film actress noted as France's national chanteuse and one of the country's most widely known international stars.",
+  "photo": "https://target.scene7.com/is/image/Target/14041191?wid=488&hei=488&fmt=pjpeg",
+  "birthYear": 1915,
+  "deathYear": 1963
+}, {
+  "artistName": "Yves Montand",
+  "albums": 9,
+  "songs": 10,
+  "description": "an Italian-French actor and singer.",
+  "photo": "https://is4-ssl.mzstatic.com/image/thumb/Music4/v4/4a/04/ca/4a04ca5c-ce44-dfd5-510e-6d3c4cfe03b9/888003485990.jpg/268x0w.jpg",
+  "birthYear": 1921,
+  "deathYear": 1991
+}, {
+  "artistName": "Michael Jackson",
+  "albums": 10,
+  "songs": 11,
+  "description": "an American singer, songwriter, and dancer. Dubbed the 'King of Pop', he was one of the most popular entertainers in the world, and was the best-selling music artist during the year of his death.",
+  "photo": "https://m.media-amazon.com/images/M/MV5BMTM1NjExNjg1OV5BMl5BanBnXkFtZTcwMTQ0NzIwMw@@._V1_UY317_CR1,0,214,317_AL_.jpg",
+  "birthYear": 1958,
+  "deathYear": 2009
+}]
