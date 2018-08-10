@@ -18,17 +18,21 @@ public class ArtistManager {
 
     public ArtistManager(Context context) {
         mContext = context;
-    }
 
-    public List<Artist> getArtistList() {
         if (smArtistList == null) {
             Type listType = new TypeToken<ArrayList<Artist>>(){}.getType();
             String json = ResourceManager.readToString(mContext.getResources(),
                     R.raw.some_app_data);
 
-            return new Gson().fromJson(json, listType);
+            smArtistList = new Gson().fromJson(json, listType);
         }
+    }
 
+    public List<Artist> getArtistList() {
         return smArtistList;
+    }
+
+    public Artist getArtist(int index) {
+        return smArtistList.get(index);
     }
 }
