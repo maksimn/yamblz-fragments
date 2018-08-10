@@ -14,14 +14,11 @@ import ru.yandex.yamblz.models.Artist;
 
 public class ArtistManager {
     private static List<Artist> smArtistList;
-    private Context mContext;
 
     public ArtistManager(Context context) {
-        mContext = context;
-
         if (smArtistList == null) {
             Type listType = new TypeToken<ArrayList<Artist>>(){}.getType();
-            String json = ResourceManager.readToString(mContext.getResources(),
+            String json = ResourceManager.readToString(context.getResources(),
                     R.raw.some_app_data);
 
             smArtistList = new Gson().fromJson(json, listType);
