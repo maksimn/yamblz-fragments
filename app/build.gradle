@@ -82,6 +82,8 @@ android {
 
 // Libraries declared in dependencies.gradle in the root of the project
 dependencies {
+    implementation 'com.google.code.gson:gson:2.8.5'
+
     compile libraries.dagger
     annotationProcessor libraries.daggerCompiler
 
