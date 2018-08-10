@@ -4,6 +4,9 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -26,10 +29,17 @@ public class MainActivity extends BaseActivity {
 
         setContentView(viewModifier.modify(getLayoutInflater().inflate(R.layout.activity_main, null)));
 
+        // Create global configuration and initialize ImageLoader with this config
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this).build();
+        ImageLoader.getInstance().init(config);
+
+        ArtistFragment artistFragment = new ArtistFragment();
+        artistFragment.setArtistIndex(5);
+
         if (savedInstanceState == null) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.main_frame_layout, new ArtistFragment())
+                    .replace(R.id.main_frame_layout, artistFragment)
                     .commit();
         }
     }
