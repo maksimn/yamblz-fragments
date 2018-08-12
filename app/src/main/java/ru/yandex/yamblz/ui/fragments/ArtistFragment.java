@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,7 +28,6 @@ public class ArtistFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_artist, container, false);
     }
 
@@ -37,6 +37,11 @@ public class ArtistFragment extends Fragment {
 
         ImageView artistPhotoImageView = (ImageView) view.findViewById(R.id.artistPhoto);
         TextView artistNameTextView = (TextView) view.findViewById(R.id.artistName);
+        Button moreButton = (Button) view.findViewById(R.id.moreButton);
+
+        moreButton.setOnClickListener(v -> {
+
+        });
 
         ArtistManager artistManager = new ArtistManager(this.getContext());
         Artist artist = artistManager.getArtist(artistIndex);

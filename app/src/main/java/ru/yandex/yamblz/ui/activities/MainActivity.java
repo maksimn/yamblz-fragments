@@ -34,7 +34,7 @@ public class MainActivity extends BaseActivity {
         ImageLoader.getInstance().init(config);
 
         ArtistFragment artistFragment = new ArtistFragment();
-        artistFragment.setArtistIndex(5);
+        artistFragment.setArtistIndex(0);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager()
