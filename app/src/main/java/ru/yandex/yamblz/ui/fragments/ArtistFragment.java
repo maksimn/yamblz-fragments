@@ -35,10 +35,7 @@ public class ArtistFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Get Artist data for the app:
-        ArtistManager artistManager = new ArtistManager(this.getContext());
-        Artist artist = artistManager.getArtist(artistIndex);
-
+        Artist artist = getArtist();
         showArtistDataInView(view, artist);
 
         // Set more button click handler:
@@ -65,9 +62,17 @@ public class ArtistFragment extends Fragment {
 
     private void showArtistDetailsFragment() {
         ArtistDetailsFragment artistDetailsFragment = new ArtistDetailsFragment();
+        Artist artist = getArtist();
+        artistDetailsFragment.setArtist(artist);
         getFragmentManager().beginTransaction()
                 .replace(R.id.main_frame_layout, artistDetailsFragment)
                 .addToBackStack(null)
                 .commit();
+    }
+
+    private Artist getArtist() {
+        ArtistManager artistManager = new ArtistManager(this.getContext());
+        Artist artist = artistManager.getArtist(artistIndex);
+        return artist;
     }
 }
