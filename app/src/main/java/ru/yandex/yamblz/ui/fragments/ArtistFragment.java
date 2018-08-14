@@ -35,15 +35,24 @@ public class ArtistFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        ImageView artistPhotoImageView = (ImageView) view.findViewById(R.id.artistPhoto);
-        TextView artistNameTextView = (TextView) view.findViewById(R.id.artistName);
-        Button moreButton = (Button) view.findViewById(R.id.moreButton);
-
-        moreButton.setOnClickListener(v -> showArtistDetailsFragment());
-
+        // Get Artist data for the app:
         ArtistManager artistManager = new ArtistManager(this.getContext());
         Artist artist = artistManager.getArtist(artistIndex);
 
+        showArtistDataInView(view, artist);
+
+        // Set more button click handler:
+        Button moreButton = (Button) view.findViewById(R.id.moreButton);
+        moreButton.setOnClickListener(v -> showArtistDetailsFragment());
+    }
+
+    public void setArtistIndex(int index) {
+        artistIndex = index;
+    }
+
+    private void showArtistDataInView(View view, Artist artist) {
+        ImageView artistPhotoImageView = (ImageView) view.findViewById(R.id.artistPhoto);
+        TextView artistNameTextView = (TextView) view.findViewById(R.id.artistName);
         ImageLoader imageLoader = ImageLoader.getInstance();
         imageLoader.loadImage(artist.photo, new SimpleImageLoadingListener() {
             @Override
@@ -52,10 +61,6 @@ public class ArtistFragment extends Fragment {
                 artistPhotoImageView.setImageBitmap(loadedImage);
             }
         });
-    }
-
-    public void setArtistIndex(int index) {
-        artistIndex = index;
     }
 
     private void showArtistDetailsFragment() {
