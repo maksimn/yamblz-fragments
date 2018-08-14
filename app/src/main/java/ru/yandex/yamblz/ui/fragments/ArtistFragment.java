@@ -39,9 +39,7 @@ public class ArtistFragment extends Fragment {
         TextView artistNameTextView = (TextView) view.findViewById(R.id.artistName);
         Button moreButton = (Button) view.findViewById(R.id.moreButton);
 
-        moreButton.setOnClickListener(v -> {
-
-        });
+        moreButton.setOnClickListener(v -> showArtistDetailsFragment());
 
         ArtistManager artistManager = new ArtistManager(this.getContext());
         Artist artist = artistManager.getArtist(artistIndex);
@@ -58,5 +56,13 @@ public class ArtistFragment extends Fragment {
 
     public void setArtistIndex(int index) {
         artistIndex = index;
+    }
+
+    private void showArtistDetailsFragment() {
+        ArtistDetailsFragment artistDetailsFragment = new ArtistDetailsFragment();
+        getFragmentManager().beginTransaction()
+                .replace(R.id.main_frame_layout, artistDetailsFragment)
+                .addToBackStack(null)
+                .commit();
     }
 }
